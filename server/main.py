@@ -30,11 +30,11 @@ def index():
 def login():
     usr = request.form.get('uname')
     psd = request.form.get('psw')
-    print (usr, psd)#jokkjjjjjjjjmmmjjjjjjjjjjjjjjjjj
+    print (usr, psd)#jokkjjjjjjjjmmmjjjjjjjjujhhjhjjjjjjjjjjj
     cur = mysql.connection.cursor()
     cur.execute("select * from users where uname=%s and pword=%s",[usr.strip(),psd.strip()])
     data = cur.fetchall()
-    print (data)#jkkjjj;kkhhkkklllkkkkkkkkkkkkkkkkkk
+    print (data)#jkkjjj;kkjjjhhkkklllkkkkkkkkkkkkkkkkkk
     cur.close()
     if len(data) > 0:
      return render_template('products.html',useridx = data[0][2])
